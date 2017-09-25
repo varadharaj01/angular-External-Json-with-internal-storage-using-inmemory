@@ -1,0 +1,10 @@
+<div id="search-component">
+  <h4>Hero Search</h4>
+  <input id="search-box"  [(ngModel)]="searchText"  />
+  <div>
+    <div *ngFor="let hero of heroes|category: searchText"
+         (click)="gotoDetail(hero)" class="search-result" >
+      {{hero.name}}
+    </div>
+  </div>
+</div>
